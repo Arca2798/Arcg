@@ -1,9 +1,10 @@
 # Arcg
 Personal archlinux themes for vm
 
-If installing from manjaro:
+If installing from manjaro:  curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/https/ | vim /etc/pacman.d/mirrorlist | pacman -S arch-install-scripts
 
-curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/https/ | vim /etc/pacman.d/mirrorlist | pacman -S arch-install-scripts
+
+If time needs to be set: ln -sf /usr/share/zoneinfo/region/city   /etc/localtime | find region by: ls /usr/share/zoneinfo/
 
 
 
@@ -16,11 +17,19 @@ pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git pl
 Genfstab -U /mnt /mnt/etc/fstab
 
 
-useradd -m -G wheel -p /bin/bash user
-
 vim /etc/locale.gen | locale-gen
 
-git clone https://aur.archlinux.org/yay-bin.git
+
+useradd -m -G wheel -p /bin/bash user
+
+
+passwd
+
+passwd user
+
+EDITOR=vim visudo 
+
+git clone https://aur.archlinux.org/yay-bin.git | makepkg -si
 
 yay -S gnome-terminal-transparency
 
