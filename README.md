@@ -10,7 +10,7 @@ If time needs to be set: ln -sf /usr/share/zoneinfo/region/city   /etc/localtime
 
 Packages
 
-pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git plasma sddm curl git linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox nautilus
+pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git plasma sddm curl git linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox nautilus bluez bluez-utils
 
 
 
@@ -37,6 +37,8 @@ yay -S gnome-terminal-transparency
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=
 grub-mkconfig -o /boot/grub/grub.cfg
+
+PROMPT='%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b '
 
 
 
