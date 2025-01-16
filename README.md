@@ -1,5 +1,5 @@
 # Arcg
-Personal archlinux themes for vm
+Personal archlinux command guide
 
 If installing from manjaro:  curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/https/ | vim /etc/pacman.d/mirrorlist | pacman -S arch-install-scripts
 
