@@ -1,12 +1,18 @@
 # Arcg
 Personal archlinux themes for vm
+
+
+
 Mirrors
 curl -o /etc/pacman.d/mirrorlist https://archlinux.org/mirrorlist/all/https/
 
 fstab
 Genfstab -U /mnt /mnt/etc/fstab
+
 Packages
-base base-devel lvm2 vim networkmanager mtools dosfstools git plasma sddm curl linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox    
+pacstrap -K /mnt base base-devel lvm2 vim networkmanager mtools dosfstools git plasma sddm curl linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox 
+
+useradd -m -G wheel -p /bin/bash user
 
 AUR
 https://aur.archlinux.org/yay-bin.git
