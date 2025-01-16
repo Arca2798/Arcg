@@ -14,7 +14,7 @@ pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git pl
 
 
 
-Genfstab -U /mnt /mnt/etc/fstab
+Genfstab -U /mnt >> /mnt/etc/fstab
 
 
 vim /etc/locale.gen | locale-gen
