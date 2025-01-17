@@ -51,3 +51,6 @@ Gnome Theme
 
 https://github.com/devansharora18/dotfiles
 
+ZSH
+
+https://gitlab.manjaro.org/packages/extra/manjaro-zsh-config/-/blob/master/PKGBUILD?ref_type=heads
