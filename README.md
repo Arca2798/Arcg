@@ -10,11 +10,11 @@ If time needs to be set: ln -sf /usr/share/zoneinfo/region/city   /etc/localtime
 
 Packages
 
-pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git plasma sddm curl git linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox nautilus bluez bluez-utils
+pacstrap -K /mnt base base-devel zsh vim networkmanager mtools dosfstools git plasma sddm curl git linux linux-lts linux-headers linux-firmware acpi  grub efibootmgr firefox nautilus bluez bluez-utils p7zip ark konsole
 
 
 
-Genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
 
 vim /etc/locale.gen | locale-gen
@@ -38,19 +38,7 @@ yay -S gnome-terminal-transparency
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=
 grub-mkconfig -o /boot/grub/grub.cfg
 
-PROMPT='%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b '
 
 
 
-Grub Theme
 
-https://www.gnome-look.org/p/2235245
-
-
-Gnome Theme
-
-https://github.com/devansharora18/dotfiles
-
-ZSH
-
-https://gitlab.manjaro.org/packages/extra/manjaro-zsh-config/-/blob/master/PKGBUILD?ref_type=heads
